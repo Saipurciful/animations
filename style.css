@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap');
+
+img {
+    width: 200px;
+}
+
+a {
+    font-size: x-large;
+}
+
+.head {
+    background-color: #f3969a;
+    padding-top: 10px;
+    text-align: center;
+    font-size: 45px;
+    color: cornsilk;
+    font-family: 'Original Surfer',
+        cursive;
+}
+
+button {
+    padding: 10px;
+    font-size: medium;
+}
+
+section h1 {
+    font-family: 'Original Surfer',
+        cursive;
+    text-align: center;
+    color: #f3969a;
+    margin-bottom: 45px;
+    font-size: 100px;
+}
+
+.card-header {
+    font-family: 'Original Surfer',
+        cursive;
+    color: #f3969a;
+    text-align: center;
+    font-size: 40px;
+}
