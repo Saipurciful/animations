@@ -10,12 +10,13 @@ a {
 
 .head {
     background-color: #f3969a;
-    padding-top: 10px;
+    padding-top: 170px;
     text-align: center;
     font-size: 45px;
     color: cornsilk;
     font-family: 'Original Surfer',
         cursive;
+
 }
 
 button {
