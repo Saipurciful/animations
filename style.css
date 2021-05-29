@@ -1,42 +1,212 @@
-@import url('https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Original+Surfer&display=swap');
+/* font-family: 'Happy Monkey', cursive;
+font-family: 'Original Surfer', cursive; */
 
+body {
+  background-image: url('bg.jpg');
+}
+/* ******************  SERVICE ****************** */
 img {
-    width: 200px;
-}
-
-a {
-    font-size: x-large;
-}
-
-.head {
-    background-color: #f3969a;
-    padding-top: 170px;
-    text-align: center;
-    font-size: 45px;
-    color: cornsilk;
-    font-family: 'Original Surfer',
-        cursive;
-
-}
-
-button {
-    padding: 10px;
-    font-size: medium;
-}
-
-section h1 {
-    font-family: 'Original Surfer',
-        cursive;
-    text-align: center;
-    color: #f3969a;
-    margin-bottom: 45px;
-    font-size: 100px;
+  width: 200px;
+  height: 150px;
 }
 
 .card-header {
-    font-family: 'Original Surfer',
-        cursive;
-    color: #f3969a;
-    text-align: center;
-    font-size: 40px;
+  font-family: 'Original Surfer', cursive;
+  color: #f3969a;
+  text-align: center;
+  font-size: 40px;
+}
+
+.modal-title {
+  font-family: 'Original Surfer', cursive;
+}
+
+/* ******************  NAV ****************** */
+
+.navbar {
+  font-family: 'Happy Monkey', cursive;
+  padding: 1%;
+  background-color: #272727;
+}
+.navbar-nav {
+  padding: 0;
+  margin: 0;
+  /* make it same line */
+  display: flex;
+}
+
+.nav-item {
+  list-style: none;
+}
+
+span {
+  color: white;
+}
+
+.nav-link,
+.navbar-brand {
+  position: relative;
+  display: block;
+  /* top bottom - left right */
+  padding: 15px 30px;
+  margin: 0 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffeb3b;
+}
+
+/* create borders top and left using before pseudo element */
+.nav-link:before,
+.navbar-brand:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-top: 2px solid #ffeb3b;
+  border-left: 2px solid #ffeb3b;
+  transition: 0.5s;
+  box-sizing: border-box;
+  transform-origin: left;
+}
+
+.nav-link:hover,
+.navbar-brand:hover {
+  color: white;
+}
+
+.nav-link:hover:before,
+.navbar-brand:hover:before {
+  width: 15px;
+  height: 15px;
+  transform: rotate(360deg);
+}
+
+/* created right and bottom border */
+.nav-link:after,
+.navbar-brand:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-bottom: 2px solid #ffeb3b;
+  border-right: 2px solid #ffeb3b;
+  transition: 0.5s;
+  box-sizing: border-box;
+  transform-origin: right;
+}
+
+.nav-link:hover:after,
+.navbar-brand:hover:after {
+  width: 15px;
+  height: 15px;
+  transform: rotate(360deg);
+}
+
+/* ****************** HEAD ****************** */
+
+.header {
+  /* background-color: #272727; */
+  font-family: 'Original Surfer', cursive;
+  text-align: center;
+  color: white;
+}
+
+.light {
+  /* width: 100%; */
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  /* background-color: #272727; */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  /* text-align: center; */
+  font-family: 'Original Surfer', cursive;
+}
+
+.light-item {
+  list-style: none;
+  color: #484848;
+  font-size: 30px;
+  letter-spacing: 15px;
+  animation: lighting 1.5s linear infinite;
+}
+
+@keyframes lighting {
+  0% {
+    color: #484848;
+    text-shadow: none;
+  }
+
+  90% {
+    color: #484848;
+    text-shadow: none;
+  }
+
+  100% {
+    color: #fff900;
+    text-shadow: 0 0 7px #fff900, 0 0 50px #fff6c00;
+  }
+}
+
+.light li:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.light li:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.light li:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.light li:nth-child(4) {
+  animation-delay: 0.9s;
+}
+
+.head {
+  /* text-align: center;
+  font-size: 45px;
+  color: white;
+  display: flex;
+  font-family: 'Original Surfer', cursive;
+  padding-bottom: 3%; */
+
+  background-image: url('woman-5151420_1280.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* padding-bottom: -25%; */
+  padding-top: 45%;
+  width: 100%;
+}
+
+.container-head,
+.container-about {
+  background-color: rgb(228, 180, 208);
+  margin: 5%;
+  padding: 5%;
+}
+
+button {
+  padding: 10px;
+  font-size: medium;
+}
+
+/* ******************  SECTION ****************** */
+
+section h1 {
+  font-family: 'Original Surfer', cursive;
+  text-align: center;
+  color: #f3a8ac;
+  margin-bottom: 45px;
+  font-size: 80px;
+  padding-top: 0px;
 }
