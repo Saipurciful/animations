@@ -3,7 +3,11 @@
 font-family: 'Original Surfer', cursive; */
 
 body {
-  background-image: url('bg.jpg');
+  background-color: #272727;
+  /* background-image: url('paper-flower-background-4794429_1920.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
 }
 /* ******************  SERVICE ****************** */
 img {
@@ -188,19 +192,25 @@ span {
   width: 100%;
 }
 
-.container-head,
-.container-about {
-  background-color: rgb(228, 180, 208);
-  margin: 5%;
-  padding: 5%;
-}
-
 button {
   padding: 10px;
   font-size: medium;
 }
 
 /* ******************  SECTION ****************** */
+
+.container-head,
+.container-about,
+.container-hello,
+.container-service {
+  background-image: url('paper-flower-background-4794429_1920.jpg');
+  background-color: rgb(144, 157, 170);
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px #888888;
+  margin: 3%;
+  padding: 5%;
+}
 
 section h1 {
   font-family: 'Original Surfer', cursive;
@@ -209,4 +219,10 @@ section h1 {
   margin-bottom: 45px;
   font-size: 80px;
   padding-top: 0px;
+}
+
+/* ******************  HELLO ****************** */
+/* .modal, */
+.modal-content {
+  background-image: url('paper-flower-background-4794429_1920.jpg');
 }
