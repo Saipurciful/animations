@@ -1,25 +1,100 @@
-@import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Original+Surfer&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Original+Surfer&family=Ribeye&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,800');
 /* font-family: 'Happy Monkey', cursive;
-font-family: 'Original Surfer', cursive; */
+font-family: 'Original Surfer', cursive;
+font-family: 'Ribeye',
+cursive;
+*/
 
 body {
   background-color: #272727;
-  /* background-image: url('paper-flower-background-4794429_1920.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; */
-}
-/* ******************  SERVICE ****************** */
-img {
-  width: 200px;
-  height: 150px;
+
 }
 
-.card-header {
-  font-family: 'Original Surfer', cursive;
-  color: #f3969a;
+/* ******************  SERVICE ****************** */
+
+
+.card {
+  position: relative;
+  margin: 5%;
+  padding: 5%;
+  width: 300px;
+  height: 400px;
+  background-color: black;
+  box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.5);
+}
+
+.content {
+  position: absolute;
+  bottom: 0px;
+  width: 80%;
+  height: 80px;
+  background-color: white;
+  left: 10%;
   text-align: center;
-  font-size: 40px;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.content h3 {
+  font-size: 30px;
+  text-transform: uppercase;
+  margin: 25px;
+  font-family: 'Original Surfer',
+    cursive;
+}
+
+.card-text {
+  width: 80%;
+  margin: 10px auto;
+  font-size: 18px;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+/* a {
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  padding: 10px 15px;
+  display: inline-block;
+  margin-top: 10px;
+  transition: 0.5s;
+  opacity: 0;
+} */
+
+.card:hover .content {
+  height: 100%;
+  width: 100%;
+  left: 0%;
+}
+
+.card:hover p,
+.card:hover a {
+  opacity: 1;
+  transition-delay: 0.5s;
+}
+
+.imgbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  /* margin: 5%; */
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+
+}
+
+.card:hover img {
+  opacity: 0;
 }
 
 .modal-title {
@@ -32,7 +107,9 @@ img {
   font-family: 'Happy Monkey', cursive;
   padding: 1%;
   background-color: #272727;
+  margin-top: 2%;
 }
+
 .navbar-nav {
   padding: 0;
   margin: 0;
@@ -61,8 +138,7 @@ span {
 }
 
 /* create borders top and left using before pseudo element */
-.nav-link:before,
-.navbar-brand:before {
+.nav-link:before {
   content: '';
   position: absolute;
   top: 0;
@@ -89,8 +165,7 @@ span {
 }
 
 /* created right and bottom border */
-.nav-link:after,
-.navbar-brand:after {
+.nav-link:after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -199,25 +274,33 @@ button {
 
 /* ******************  SECTION ****************** */
 
+.container-service {
+  margin: 5%;
+  padding: 5%;
+}
+
 .container-head,
 .container-about,
 .container-hello,
-.container-service {
+/* .container-service, */
+.container-contact,
+.container-gallery {
   background-image: url('paper-flower-background-4794429_1920.jpg');
   background-color: rgb(144, 157, 170);
   border: 1px solid;
-  padding: 10px;
+  /* padding: 10px; */
   box-shadow: 5px 10px #888888;
-  margin: 3%;
+  margin: 5%;
   padding: 5%;
 }
 
 section h1 {
-  font-family: 'Original Surfer', cursive;
+  font-family: 'Ribeye',
+    cursive;
   text-align: center;
   color: #f3a8ac;
   margin-bottom: 45px;
-  font-size: 80px;
+  font-size: 50px;
   padding-top: 0px;
 }
 
@@ -225,4 +308,60 @@ section h1 {
 /* .modal, */
 .modal-content {
   background-image: url('paper-flower-background-4794429_1920.jpg');
+}
+
+/* #container-logo {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Original Surfer',
+    cursive;
+  background-color: #2f2f2f;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+#wave {
+  /* position: relative; */
+  width: 80px;
+  height: 80px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+/* section h1 {
+  position: absolute;
+  text-align: center;
+  line-height: 90px;
+  font-size: 30px;
+  text-transform: uppercase;
+
+} */
+
+#wave h1:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 2px#;
+}
+
+#wave h1:nth-child(2) {
+  color: #272727;
+  animation: wave 2s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0% {
+    clip-path: polygon(0% 38%, 21% 40%, 38% 51%, 54% 57%, 75% 57%, 100% 52%, 100% 100%, 0% 100%);
+  }
+
+  50% {
+    clip-path: polygon(0 49%, 16% 56%, 33% 55%, 55% 50%, 75% 42%, 100% 40%, 100% 100%, 0% 100%);
+  }
+
+  100% {
+    clip-path: polygon(0% 38%, 21% 40%, 38% 51%, 54% 57%, 75% 57%, 100% 52%, 100% 100%, 0% 100%);
+  }
 }
